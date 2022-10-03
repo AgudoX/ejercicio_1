@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+
+    <script>
+        /* Undefined - una variable coje valor undefined siempre que no se le asigne valor. */
+
+        var anioNacimiento;
+        /* Herramienta de depuración */
+        console.log(anioNacimiento);
+
+
+        /* var alert = "Don Agudo" */
+
+        /* Hay una función de js que se llama alert, si creamos una variable con el mismo nombre que esa función nos dará problemas. */
+
+
+        /* 2 - Como asignar a una variable un tipo de dato: */
+        /* Utilizar siempre que se pueda comillas simples y ; pq es la costumbre en otros lenguajes. */
+        var nombre = 'juan';
+        var apellidos = 'Perez';
+        var html = '<div class="rojo"><p> <strong> parrafo </strong> </p></div>';
+        console.log(nombre)// juan
+
+        document.write(html)
+
+
+        nombre = 4; /* Reasignación del valor de una variable. */
+        console.log(nombre) //4 
+        /* No reasignar variable con datos diferentes al tipo de nombre porque genera confusión. */
+
+        /* El resultado de este console.log es diferente al del anterior debido a que es un lenguaje lineal y lee y lo interpreta de manera lineal. */
+
+        console.log(typeof nombre); //number
+        /* JS permite la inferencia del tipo de datos de una variable después de su asignación. */
+
+        //number
+        var numeroEntero = 23;
+        var numeroRacional = 23.45;
+        var numeroReal = -45;
+
+        console.log(numeroEntero + 2)//25
+        console.log(numeroEntero * 2) //46
+        console.log(numeroEntero * '2')//46 No se debe hacer
+        /* Js reinterpreta la cadena de caracteres y dice: puedo convertirlo a un número? Sí, lo convierte */
+
+        console.log(numeroEntero + '2')//242
+        /* El operador + es un operador matemático y de concatenación, con el - no pasa. */
+
+        //booleanos
+
+        var activo = true;
+        var encendido = false;
+
+        //null
+
+        var vehiculo = "moto";
+        console.log(typeof vehiculo); //string
+
+        //Vaciar el dato
+        vehiculo = "";
+
+        //Vaciar de dato y tipo
+
+        /* Para un number sería:
+
+        Si es +/- = 0
+        Si es //* es = 1.
+        
+        Para un booleano es:
+
+        false; */
+
+        vehiculo = null; //object
+
+
+
+
+    </script>
+</body>
+
+</html>

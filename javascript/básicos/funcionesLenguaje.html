@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones del lenguaje</title>
+</head>
+
+<body>
+
+
+    <script>
+        var user = 'Mario Girón';
+        var userUppercase = user.toUpperCase();
+        /* Convierte la var user a mayúsculas, para aplicar una función ponemos el nombredelavar.funcion . */
+        var userLowerCase = user.toLowerCase();
+
+        console.log('Mayúsculas', userUppercase);
+        console.log('Minúsculas', userLowerCase);
+
+
+        /* Como pedir datos por pantalla, esto no se usa para la web por producción, sino para el programador. */
+
+        var edad = prompt('Dime tu edad:');
+        console.log(typeof edad);//Devuelve una string.
+
+        //Función de conversión a número:
+
+        /*
+        parseInt(); 
+        parseFloat;
+        Number();
+        */
+        var numeroStr = '128.28'
+        var numeroEntero = 13;
+        var numero = 'trece'
+
+        var numeroRacional = parseFloat(numeroStr); //128.45
+        console.log(numeroRacional);
+        var numeroRacional2 = parseFloat(numeroEntero); //13.00
+
+
+        //parseInt coge una cadena y la convierte en numérica cogiendo solo la parte entera.
+
+        // parseFloat coge una cadena y la convierte en numerica racional, es decir, con los decimales.
+
+        console - log(parseFloat(numero))//NaN Not at a Number
+
+        // Number() :   Convierte strings en numbers y 
+        var numberRacional3 = Number(numeroStr);
+        console.log(numberRacional3);//128.28
+
+        //sumar correctamente dos variables
+
+        var numero1 = prompt('Dime un número:');
+        var numero2 = prompt('Dime otro número:');
+
+
+        var suma = numero1 + numero2; //Si te dan un 12 y un 13 el resultado sería 1213 pq es una string.
+
+        var sumaBien = Number(numero1) + Number(numero2);// Esto si sumaría, usamos esto en vez de parseInt para que coja los decimales.
+
+        /* No funcionaría: Number(numero1 + numero2); ya que lee de dentro para fuera. */
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

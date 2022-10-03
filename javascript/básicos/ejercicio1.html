@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpico</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        var segundos = 54321;
+        var minutos = segundos / 60;
+        var horas = segundos / (60 * 60);
+        var segundosRestantes = segundos % (60 * 60);
+        var minutos = segundosRestantes / 60;
+        var segundosRestantes = segundosRestantes % 60;
+
+        console.log('En ' + segundos + 'segundos hay ' + horas + ' horas, ' + minutos + ' minutos, y ' + segundosRestantes + ' segundos. ')
+
+
+
+        /* Como redondear la parte entera */
+        console.log(parseInt(horas));
+        /* La función parseInt muestra la parte ent de un número */
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional Switch</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* Switch evalua el valor de una variable y devuelve diferentes opciones en función de posibles valores que tome dicha variable.
+        Esos posibles valores se denominan casos.
+         */
+
+        //traductor de colores Esp - Eng
+
+        const color = prompt('Dime un color en castellano');
+
+
+        /* If es mejor para rangos y switch para diferentes casos */
+
+        switch (color) /* Evalua la existencia de color unicamente */ {
+
+            case 'rojo':
+            case 'bermellon':
+            case 'bermellón':
+            case 'vermellon':
+
+                console.log('red');
+                break;
+
+            /* Se pone break para que evalue el siguiente caso */
+            case 'azul':
+                console.log('blue');
+                break;
+
+            /* Esta es la sentencia de salida */
+
+            default:
+                console.log('no tenemos ese color en el diccionario')
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

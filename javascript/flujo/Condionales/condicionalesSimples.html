@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales Simples</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        Sintaxis:
+        if(condicion){
+            sentencias que se ejecutan si se cumple dicha condicion.
+        }
+        */
+
+        //Saber si la persona es mayor de edad
+
+        const edad = parseInt(prompt('Dime tu edad'));
+
+        const EDAD_CORTE = 18;
+
+        if (edad >= EDAD_CORTE) {
+            console.log('eres mayor de edad')
+        }
+
+
+
+        // Condicional simple con secuencia de escape;
+
+
+        if (edad >= EDAD_CORTE) {
+            console.log('eres mayor de edad')
+        } else {
+            console.log('eres menor de edad')
+        }
+
+        // Otra opción mas completa
+
+        if (edad >= 0 && edad < EDAD_CORTE) {
+            console.log('eres mayor de edad')
+        } else {
+            console.log('eres menor de edad')
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

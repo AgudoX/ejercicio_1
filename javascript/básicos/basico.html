@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como y donde cargamos javascript</title>
+    <!-- 1ª opción: Dentro del head, casi siempre andes del </head> -->
+    <script>
+        /* 1ª Forma de ejecutarlo: En el propio html con la etiqueta script */
+        alert("Hola desde el navegador");
+    </script>
+
+    <script src="../javascript/básicos/js/"></script>
+    <!-- Si ponemos al final del body un script deberiamos colocar este script también para que se cargue en el head. -->
+</head>
+
+<body>
+    <h1>Hola mundo</h1>
+
+
+    <!-- 2ª zona de carga de Js, justo antes del final de body, despues de cargar todo el html. -->
+
+    <script>
+        alert("Estoy al final del body");
+    </script>
+</body>
+
+</html>

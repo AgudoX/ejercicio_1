@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantes</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        /* Una constante se declara he inicializa en la misma linea */
+
+        const GRAVEDAD_TIERRA = 9.8;
+        /* No se puede reasignar */
+        console.log(GRAVEDAD_TIERRA);
+
+        GRAVEDAD_TIERRA = 10 //error: No se pueden reasigar valores a una const.
+
+        var a = 2;
+        var b = 4;
+        const OTRA_GRAVEDAD = a + b;
+        console.log(OTRA_GRAVEDAD); // 6
+
+        a = 3;
+        console.log(OTRA_GRAVEDAD); //6
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
