@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 bucles</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* Si uso constantes no funcionaria por temas de scope y porque se sobreescribirian */
+        var user = prompt('Dime un usuario').toLowerCase()
+        var password = prompt('Dime un password')
+
+        /*
+        if (user == 'irene' && password == '12345') {
+ 
+            document.write('<h1>Bienvenido</h1>');
+        } else {
+            console.log('error')
+        } */
+
+
+
+        while (user !== 'irene' || password !== '12345') {
+            user = prompt('Usuario equivocado, Dime de nuevo:');
+            password = prompt('Contraseña equivocada');
+        }
+
+        document.write('<h1>Bienvenido</h1>')
+
+
+    </script>
+
+
+
+</body>
+
+</html>

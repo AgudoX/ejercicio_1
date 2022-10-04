@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones que reciben parámetros o argumentos</title>
+</head>
+
+<body>
+
+
+    <script>
+        /* Esta variable no funcionaría en la función pq para pasarle los parámetros se hace en la llamada */
+        var nombre = 'Juan';
+
+        // Una función puede recibir parámetros, los define en la declaración de la función y envia la llamada. Y están separados por comas.
+
+        // Primero se ponen todos los parámetros obligatorios y luego todos los optativos.
+
+        function saludar(pNombre) {
+            document.write('<h1> Hola ' + pNombre + ' </h1>')
+
+        }
+
+        saludar('Carlos')
+        saludar('Marcos')
+        saludar('Antonio')
+
+
+        /* Parámetros optatívos, se ponen los últimos */
+        function greeting(pNombre, pApellido = 'Lopez') {
+            document.write('<h1> Hola ' + pNombre + ' ' + pApellido + ' </h1>')
+
+        }
+
+        greeting('Pepe')
+        greeting('María', 'Perez')
+
+
+
+    </script>
+</body>
+
+</html>

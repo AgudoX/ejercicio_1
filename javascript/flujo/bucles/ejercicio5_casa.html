@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <!-- <div style="background-color: red; width: 100px; height: 100px; margin-left:0;"></div>
+    <div style="background-color: red; width: 100px; height: 100px; margin-left:100px;"></div>
+    <div style="background-color: red; width: 100px; height: 100px; margin-left:200px;"></div> -->
+
+    <script>
+
+        //pedir una cantidad de cuadrados, su ancho y situarlos en escalera.
+
+        //cada 5 elementos invertir la direccion de la escalera.
+
+        /*         var ncuadrados = parseInt(prompt('Dime cuantos cuadrados quieres'))
+        
+                var ancho = parseInt(prompt('Dime la anchura y altura del cuadrado'))
+        
+                var c = 1;
+                var margin = -100;
+        
+                for (i = -1; i <= ncuadrados; i++) {
+        
+                    if (i % 5 == 0 && i != 0) {
+                        c = (c * -1);
+                    }
+                    margin = margin + (100 * c);
+                    document.write(`<div style="background-color: red; width: ${ancho}px; height: ${ancho}px; margin-left:${margin}px;">${i + 2}</div>`)
+                } */
+
+        var ncuadrados = parseInt(prompt('Dime cuantos escalones quieres'))
+
+        var ancho = parseInt(prompt('Dime la anchura y altura del escalon'))
+
+        var c = 1;
+        var margin = 0;
+
+        for (i = 0; i + 1 <= ncuadrados; i++) {
+
+            if (i % 5 == 0 && i != 0) {
+                c = (c * -1);
+            }
+            margin = margin + (ancho * c);
+            document.write(`<div style="background-color: red; width: ${ancho}px; height: ${ancho}px; margin-left:${margin}px;">${i + 1}</div>`)
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

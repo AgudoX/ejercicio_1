@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador ternario</title>
+</head>
+
+<body>
+
+    <script>
+
+        var nota = parseFloat(prompt('Dime tu nota:'));
+        var mensaje = '';
+        if (nota >= 5) {
+            /*             console.log('Estas aprobado') */
+            mensaje = 'Aprobado';
+        } else {
+            /* console.log('suspenso') */
+            mensaje = 'Suspenso';
+        }
+
+        document.write('<h1>' + mensaje + '</h1>');
+
+        //operador ternario
+
+        /* si se cumple la condición de la nota, la var coje el valor a la izq de los : sino cogera el de la der. */
+        var otromensaje = (nota > 5) ? 'Estoy aprobado' : 'Estoy suspenso';
+
+        document.write('<h1>' + otromensaje + '</h1>')
+
+
+    </script>
+
+</body>
+
+</html>

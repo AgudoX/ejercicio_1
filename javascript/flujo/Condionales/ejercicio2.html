@@ -14,13 +14,52 @@
 
 
     <script>
-        var color = prompt('Dime un color EN INGLES').toLowerCase();
+        /*         var color = prompt('Dime un color EN INGLES').toLowerCase();
+        
+                var tamaño = parseInt(prompt('Dime un tamaño'));
+        
+                var diametro = parseInt(prompt('Dime un diametro'));
+        
+                document.write('<div style="border-radius: ' + diametro + '%; height:' + tamaño + 'px; width:' + tamaño + 'px; background-color: ' + color + ';"></div>') */
 
-        var tamaño = parseInt(prompt('Dime un tamaño'));
+        var ancho = '';
+        var alto = '';
+        var radio = '';
+        var color = '';
 
-        var diametro = parseInt(prompt('Dime un diametro'));
+        var poligono = prompt('Dime que poligono quieres dibujar, circulo, cuadrado, rectangulo y elipse').toLowerCase();
 
-        document.write('<div style="border-radius: ' + diametro + '%; height:' + tamaño + 'px; width:' + tamaño + 'px; background-color: ' + color + ';"></div>') 
+        switch (poligono) {
+
+            case 'circulo':
+            case 'cuadrado':
+                ancho = prompt('Dime el lado del poligono');
+                alto = ancho;
+                color = prompt('Dime un color en ingles');
+                break;
+
+            case 'elipse':
+            case 'rectangulo':
+                ancho = prompt('Dime el ancho del poligono');
+                alto = prompt('Dime el alto del poligono');
+                color = prompt('Dime un color en ingles');
+                break;
+
+            default:
+                console.log('La opcion no es correcta');
+                break;
+
+        }
+
+        if (poligono === 'elipse' || poligono === 'circulo') {
+            radio = '50%';
+        } else {
+            radio = '0%'
+        }
+
+
+        document.write('<div style="background-color: ' + color + '; width: ' + ancho + 'px; height: ' + alto + 'px; border-radius: ' + radio + '"></div>')
+
     </script>
 
 

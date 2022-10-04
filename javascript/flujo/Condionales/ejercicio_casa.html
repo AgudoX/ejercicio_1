@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- del policia: un policia me pide el carnet si no tengo edad de trabajar 18 - 65 y mostrará un semaforo en rojo, su estoy edad de trabajar semaforo verde, y si me quedan menos de 5 años para jubilarme semaforo amarillo  -->
+
+    <script>
+
+        var edad = parseInt(prompt('Que edad tiene caballero:'));
+        const MAYORIA_EDAD = 18
+        const EDAD_TRABAJAR = 60
+        const EDAD_JUBILACION = 65
+        var color = '';
+
+        if (edad >= 0 && edad < MAYORIA_EDAD) {
+            color = 'red'
+        } else if (edad >= 18 && edad <= EDAD_TRABAJAR) {
+            color = 'green'
+        } else if (edad > EDAD_TRABAJAR && edad <= EDAD_JUBILACION) {
+            color = 'yellow'
+        } else {
+            alert('Enhorabuena, ya has cotiza suficiente, por ahora.')
+        }
+
+        document.write('<div style="background-color: ' + color + '; width: 100px; height: 100px;"></div>')
+
+
+
+
+
+    </script>
+</body>
+
+</html>
