@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones que devuleven parámetros</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Funciones que devuelven parámetros:
+
+        //Procedimientos: Aquellas funciones que pintan algo por consola o por pantalla.
+
+        //Las funciones solo realizan calculos o acciones necesarias para mi código pero no pintan nada.
+
+        function resta(pNumbre1, pNumber2) {
+            let resultado = pNumbre1 - pNumber2;
+            console.log(resultado); //Sin el console.log al ejecutar la función no veriamos nada.
+        }
+
+        resta(14, 4)
+
+        function suma(pNumbre1, pNumber2) {
+            let resultado = pNumbre1 + pNumber2;
+            return resultado; //Esto hace que la función muestre el dato, es lo último que se pone en una función.
+        }
+
+        let diferencia = suma(14, 4) //siempre que haya un let igualado a una función significa que esa función hace un return.
+
+    </script>
+
+</body>
+
+</html>

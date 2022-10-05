@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito funcional</title>
+</head>
+
+<body>
+    <script>
+        // El ambito define como se comportan las constantes y variables dentro de mi código y como las puedo usar.
+
+        //Tenemos 2 tipos de ámbitos, global y local.
+
+        //Global: El valor de la variable es accesible desde cualquier parte de mi código.
+
+        //local: El valor de la variable es accesible solo desde la estructura donde ha sido creada.
+
+        // Los ámbitos comienzan cuando se abre una llave {}
+
+        // El ámbito funcional solo compete a las funciones y existe en otros lenguajes de programación.
+
+        var nombre = 'Juan'; //global
+        var estado = false; //global
+
+        if (estado === true) {
+            var edad = 28; //global, sería local en una función pero JS para cosas que no son funciones las entiende como globales.
+        }
+
+        function saludar() {
+            var apellido = 'Perez' //Local
+        }
+
+
+
+    </script>
+</body>
+
+</html>

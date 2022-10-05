@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Las funciones flechas es una forma más corta de escribir una función anónima. Me permite evitar el haduken.
+
+        //Receta convertir una función anónima en flecha.
+
+        // Paso 1: Quito la palabra function y la sustituyo por una flecha (=>) situada después de los paréntesis.
+
+        // paso 2 : solo si la función tiene un único parámetro se pueden quitar los paréntesis de los paréntesis, ni 0 ni +1.
+
+        //Paso 3: Si la función ejecuta una única linea de código dentro de las llaves, puedo quitar las llaves, y si esa linea es un return tengo que quitar el return.
+
+        const sumar = function (pNumero1, pNumero2) {
+            let resultado = pNumero1 + pNumero2
+            return resultado
+        }
+
+        const sumita = (pNumero1, pNumero2) => {
+            let resultado = pNumero1 + pNumero2
+            return resultado
+        }
+
+        const restita = (pNumero1, pNumero2) => console.log(pNumero1 - pNumero2);
+
+
+        const restita2 = (pNumero1, pNumero2) => pNumero1 - pNumero2;
+
+
+        //Declarativa => Anónima => Arrow
+
+        function paridad(pNumero) {
+            let resultado = (pNumero % 2 === 0) ? 'par' : 'impar';
+        }
+
+        //  2º 
+
+        const paridad2 = pNumero => (pNumero % 2 === 0) ? 'par' : 'impar';
+
+
+
+
+    </script>
+</body>
+
+</html>

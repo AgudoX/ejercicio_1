@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //Sacar PVP de un producto
+
+        //PVP = ((precioCompra + margenBeneficios) * IVA) + (precioCompra + margenBeneficios)
+
+
+        //IVA se calcula sobre el precio de compra y el beneficio;
+        // El beneficio solo sobre el precio de compra;
+        // La aplicación debe tener en cuenta diferentes tipos de IVA.
+
+        let precio = 300;
+        let impuesto = 21;
+        let beneficio = 70;
+
+
+        function calcularIva(pPrecio, pImpuesto) {
+            return pPrecio * pImpuesto / 100;
+        }
+
+        function calcularMargen(pPrecioCoste, pMargen) {
+            return pPrecioCoste * pMargen / 100
+        }
+
+
+        function calcularPvp(pPrecioProveedor, pMargen, pImpuesto) {
+            const MARGEN_FINAL = calcularMargen(pPrecioProveedor, pMargen);
+
+            const precioConMargen = MARGEN_FINAL + pPrecioProveedor;
+
+            //Calcular impuestos;
+            const IVA = calcularIva(precioConMargen, pImpuesto);
+
+            const PVP = precioConMargen + IVA;
+            return PVP
+        }
+
+        let precioFinal = calcularPvp(precio, beneficio, impuesto)
+
+
+        function pintarPVP(price) {
+            let resultado = `<h1> El precio del artículo es ${price}€</h1>`;
+            document.write(resultado)
+        }
+
+        pintarPVP(precioFinal);
+
+
+        // Intentar colocar las funciones y las variables en el orden que corresponde, no hacer housting, la llamada debe de estar por debajo.
+
+
+
+    </script>
+</body>
+
+</html>

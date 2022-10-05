@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Rest Parameter me permite pasar argumentos definidos junto con argumentos indefinidos.
+        // Los definidos primero.
+
+        /* Los tres puntos significan que puedes ser 1, 2, o + numeros(variable) */
+        function calcular(pTipo, ...numeros) {
+            let resultado = 0
+
+            for (let i = 0; i < numeros.length; i++) {
+                switch (pTipo) {
+                    case 'sumar':
+                        //sumar todos los numeros
+                        resultado += numeros[i]
+                        break;
+
+                    case 'restar':
+                        //Restar todos los numeros
+                        resultado -= numeros[i]
+                        break;
+
+                }
+
+            }
+
+            console.log(resultado);
+        }
+
+
+        calcular('sumar', 1, 2, 3, 4)
+
+    </script>
+
+</body>
+
+</html>

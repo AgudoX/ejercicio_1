@@ -13,41 +13,91 @@
 
     <script>
 
-        function mostrar(re) {
-            console.log(re)
+        //realizar un programa, que me permita calcular matematicamente sumas, restas, multiplicaciones de dos numeros cualesquiera. Posteriormente se podra pintar el resultado por pantalla.
 
+        /*
+        
+        Mi Ejercicio:
+
+                function mostrar(re) {
+                    console.log(re)
+        
+                }
+        
+                function suma(x, y) {
+                    var resultado;
+                    resultado = x + y;
+                    return resultado
+                }
+                mostrar(suma(7, 5))
+        
+        
+                function resta(x, y) {
+                    var resultado;
+                    resultado = x - y;
+                    return resultado
+        
+                }
+        
+                mostrar(resta(4, 6))
+        
+                function multiplicacion(x, y) {
+                    var resultado;
+                    resultado = x * y;
+                    // Tenemos que hacer un return del resultado sino es como si la operación no se mostrase, saldría undefined . 
+        
+                    return resultado
+                }
+                mostrar(multiplicacion(7, 7))
+        
+                mostrar(suma(2, 2))
+        
+         */
+        // Copiar ejercicio Profesor
+
+        function pintarResultado(pResultado, pOperacion) {
+            document.write(`<h1>El resultado de la ${pOperacion} es ${pResultado}`);
+        }
+
+        function sumar(pNumeroA, pNumeroB) {
+            var resultado = pNumeroA + pNumeroB;
+            pintarResultado(resultado, 'Suma');
+        }
+
+        function restar(pNumeroX, pNumeroY) {
+            var resultado = pNumeroX - pNumeroY;
+            pintarResultado(resultado, 'Resta');
+        }
+
+        function multiplicar(pNumeroA, pNumeroB) {
+            var resultado = pNumeroA * pNumeroB;
+            pintarResultado(resultado, 'Multiplicación')
         }
 
 
-        function suma(x, y) {
-            var resultado;
-            resultado = x + y;
-            return resultado
+        function calcular(pNumero1, pNumero2, pOperacion) {
+
+            switch (pOperacion) {
+                case 'sumar':
+                    //sumamos
+                    sumar(pNumero1, pNumero2);
+                    break;
+
+                case 'restar':
+                    //restamos
+                    restar(pNumero1, pNumero2);
+                    break;
+
+                case 'multiplicar':
+                    //multiplamos
+                    multiplicar(pNumero1, pNumero2)
+                    break;
+
+            }
         }
-        mostrar(suma(7, 5))
 
+        calcular(1, 2, 'sumar');
 
-        function resta(x, y) {
-            var resultado;
-            resultado = x - y;
-            return resultado
-
-        }
-
-        mostrar(resta(4, 6))
-
-        function multiplicacion(x, y) {
-            var resultado;
-            resultado = x * y;
-            /* Tenemos que hacer un return del resultado sino es como si la operación no se mostrase, saldría undefined */
-            return resultado
-        }
-        mostrar(multiplicacion(7, 7))
-
-        mostrar(suma(2, 2))
-
-
-        /*  Copiar ejercicio Profesor */
     </script>
 </body>
 

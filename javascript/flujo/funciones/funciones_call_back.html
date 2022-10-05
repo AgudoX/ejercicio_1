@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función de call back</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        //funcion de callback es un funcion que se pasa como parametro de otra.
+
+
+        //opcion 1: paso el callback como valor de la ejecución de otra funcion.
+
+        function saludar(pNombre) {
+            document.write(`<h1>Hola ${pNombre}</h1>`);
+        }
+
+        //saludar(prompt('dime tu nombre'))
+
+        //una funcion que se conecta BBDD y me va a devolver un nombre.
+
+        function getUser() {
+            let nombre = 'Juanita';
+            return nombre;
+        }
+
+        saludar(getUser());
+
+        //opcion 2 - paso el callback en la declaracion de la funcion.
+
+        // Opción 2 : Paso el callback en la declaración de la función. Utilizar el parámetro de una función como una función en sí.
+
+        function calcular(pFn) {
+            let numero1 = 12;
+            let numero2 = 3;
+            pFn(numero1, numero2)
+        }
+
+
+        const sumar = function (pNumero1, pNumero2) {
+            console.log(pNumero1 + pNumero2);
+        }
+
+        const restar = function (pNumero1, pNumero2) {
+            console.log(pNumero1 - pNumero2);
+        }
+
+        calcular(sumar);
+    </script>
+
+
+
+</body>
+
+</html>

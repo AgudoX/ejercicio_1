@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de bloque</title>
+</head>
+
+<body>
+
+
+    <script>
+        //ambito de bloque es cualquier bloque de codigo entre {} y al ambito de condiciones que hay entre (). Todas las estructuras condicionales, bucles, funciones.
+
+        //Las variables para este tipo de ambito se llaman let, no var
+
+        //Let y Const tienen el mismo ámbito.
+
+        var ciudad = 'Madrid'; //Global
+        let nombre = 'Juan'; //Global
+        const PI = 3.1415; //Global
+
+        if (nombre == 'juan') {
+            var edad = 23; //Global
+            let apellido = 'Perez' // Local
+            const city = 'Pekin' //local
+        }
+
+        console.log(apellido); //No funciona pq let es local.
+
+        //Si creamos variables con let podemos usar varios el mismo nombre de variable, cada en su ambito.
+
+
+
+
+    </script>
+</body>
+
+</html>

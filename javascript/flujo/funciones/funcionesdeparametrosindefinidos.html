@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de parámetros indefinidos</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Función de parámetros indefinidos tiene 2 premisas:
+
+        //1ª Funciones que no reciben parámetros, si recibieran parámetros no serían indefinidas; 
+
+        //2ª Usamos una propiedad de las funciones que se llama argument, y que consiste en un listado de argumentos o parámetros.
+
+
+        /* Funciones que le puedes meter los parámetros que tu quieras. */
+        sumar(1, 2, 3, 4)//10; El argumento 2 de esta lista es el 3;
+        sumar(10, 10, 10, 10, 10, 10)//60
+
+        function sumar() {
+            console.log(arguments[4]);
+            //Arguments devuelve un listado de elementos, un array.
+            /* Los listados empiezan siempre por 0;
+            Las listas se escriben entre corchetes; */
+
+            /* Esto mostraría el 5 elemento ya que empieza en 0. */
+        }
+
+        function suma2() {
+            let resultado = 0;
+
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+
+        suma2(12, 12, 14, 20)//58
+
+
+    </script>
+</body>
+
+</html>

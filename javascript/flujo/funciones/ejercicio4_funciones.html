@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <script>
+        //Dado un número cualquiera decir si es primo o no.
+        //Un número es primo cuando solo es divisible por si mismo y por uno.
+
+        function esPrimo(pNumero) {
+            let contador = 0
+
+            for (let i = 2; i < pNumero; i++) {
+
+                if (pNumero % i === 0) {
+                    contador++; // contador = contador + 1
+                    break;
+                }
+
+            }
+
+            if (contador === 1) {
+                alert('El número no es primo');
+            } else {
+                alert('El número es primo')
+            }
+
+        }
+
+        esPrimo(7)
+
+        /*         if (c == 2) {
+                    console.log('El número es primo');
+                } */
+
+    </script>
+
+</body>
+
+</html>

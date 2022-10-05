@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad</title>
+</head>
+
+<body>
+
+    <script>
+        //La recursividad es una función que se llama a si mismo para evitar el uso de bucles.
+
+        let resultado = 0;
+        let cantidad = 5
+        //sumar del 1 al 5
+
+        for (let i = 1; i <= cantidad; i++) {
+            resultado += i// resultado = resultado + i;
+        }
+
+        /* Hacemos esto mismo con una función recursiva.
+        Se utiliza para no usar bucles, metemos una función en esa misma función */
+
+        const sumar = function (pCantidad) {
+            resultado += pCantidad;
+            pCantidad--;
+            if (pCantidad !== 0) {
+                sumar(pCantidad)
+            }
+        }
+
+        sumar(5)
+        console.log(resultado);
+
+
+
+    </script>
+</body>
+
+</html>

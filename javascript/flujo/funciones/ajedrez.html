@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="cuerpo" style="display: flex; flex-flow: wrap; width: 10px ;">
+    <!--     <div style="display: flex; flex-flow: wrap">
+        <div style="background-color: tomato; width: 100px; height: 100px;"></div>
+    </div> -->
+
+
+
+    <script>
+        //ejercicio ajedrez
+
+        //pregunta cuantas casillas y el ancho de la casilla y montar un tablero de ajedrez dinamico.
+
+        //paso 1: pintar una casilla
+        //paso 2: pintar una fila
+        //paso 3: pintar tablero
+
+        let color = ""
+        let numeroCasillas = parseInt(prompt('Dime cuantas casillas quieres por alto y ancho'))
+        let anchoCasillas = parseInt(prompt('Dime el tamaño de cada casilla'))
+        /* let casilla = '<div style="background-color: ' + color + ' ; width: ' + anchoCasillas + 'px; height: ' + anchoCasillas + 'px;"></div>' */
+
+        /*    
+             document.getElementById("cuerpo").style.width = anchoCasillas * numeroCasillas + "px";
+        
+                for (let i = 1; i <= (numeroCasillas * numeroCasillas); i++) {
+                    color = (i % 2 !== 0) ? "tomato" : "green";
+                    let casilla = '<div style="background-color: ' + color + ' ; width: ' + anchoCasillas + 'px; height: ' + anchoCasillas + 'px;"></div>'
+                    document.write(`${casilla} `)
+                } 
+                
+                */
+
+
+
+        function changeBody(pAnchoCasillas, pNumeroCasillas) {
+            document.getElementById("cuerpo").style.width = pAnchoCasillas * pNumeroCasillas + "px";
+        }
+
+        function pintarCasilla(pColor, pAncho,) {
+
+            let casilla = `<div style="background-color: ${pColor} ; width: ${pAncho}px; height: ${pAncho}px;"></div>`
+            document.write(`${casilla} `)
+
+        }
+
+
+        function chess(pNumeroCasillas) {
+            changeBody(anchoCasillas, numeroCasillas);
+            for (let i = 1; i <= (pNumeroCasillas * pNumeroCasillas); i++) {
+                color = (i % 2 !== 0) ? "tomato" : "green";
+                pintarCasilla(color, anchoCasillas);
+            }
+        }
+
+        chess(numeroCasillas);
+
+
+        /*         if (numeroCasillas % 2 === 0) {
+                    color = (i % 2 === 0) ? "tomato" : "green";
+                } else { color = (i % 2 === 0) ? "green" : "tomato"; } */
+
+    </script>
+</body>
+
+</html>
