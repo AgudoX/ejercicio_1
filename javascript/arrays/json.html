@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON o Array asociativo</title>
+</head>
+
+<body>
+    <script>
+        //JSON significa JavaScript Object Notation. Es objeto basicamente por que es un conjunto de datos de diferentes tipologias. Es lo que se conoce en otros lenguajes de programacion como array asociativo. Eliminar el concepto de posicion para hablar de clave: valor;
+
+        //const producto = new Object({}) //POO - Objecto Vacio
+
+        //const otroProducto = {}; //Funcional - Objeto Vacio.
+
+        const producto = {
+            titulo: 'Leche desnatada',
+            precio: 0.50,
+            cantidad: 10,
+            capacidad: 1.5,
+            stock: true
+        }
+
+        console.log(producto);
+
+        //opcion 1 nomenclatura de corchete (es la que usamos en los arrays), es la menos usada, pero la mas versatil.
+
+        console.log(producto['titulo'])
+        producto['marca'] = 'Pascual';
+
+
+        const cosa = new Object();
+        cosa['clave'] = 'valor';
+        cosa['clave1'] = 'valor2';
+        cosa['clave2'] = 'valor3';
+        console.log(cosa);
+
+        //opcion 2 nomenclatura de punto (es la usamos en POO)
+
+        console.log(producto.capacidad);
+
+
+        //pedir por pantalla una clave para sacar el dato del producto.
+
+        let clave = prompt('Dime una clave');
+
+        //console.log(producto.clave);
+        console.log(cosa['clave'])//Me saca el valor asociado a clave en el JSON llamado cosa
+
+        //como objecto no es iterable no puedo usar un for normal FOR IN.
+
+        for (let clave in producto) {
+            document.write(`<p>${clave}: ${producto[clave]}</p>`)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

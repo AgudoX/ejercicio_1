@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Simple</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Un array es una list de elementos, estos elementos suelen ser del mismo tipo, pero pueden tener elementos de distinto tipo.
+
+
+        // 2 formas de trabajar con arrays:
+
+        //Forma funcional
+        //Se generan como una constante, no puedes cambiar que sea una array pq es una constante, pero si puedes cambiar los elementos de la lista.
+        const listaAlumnos = [] //array vacio
+
+        //Forma POO = Programación Orientada a Objetos.
+        const otraLista = new Array(); //array vacio, se escribe en mayúscula ya que es una clase (Lo veremos posteriormente).
+
+        //Los arrays tienen longitud (length), y se numeran de 0 a n-1 siendo n la longitud del array;
+
+        listaAlumnos[0] = 33; //Meter un elemento en una array ya creada.
+
+        console.log(listaAlumnos)
+
+        const listaAlumnosPresenciales = new Array('Alvaro', 'Marcos', 'Miguel')
+
+
+        const listaAlumnosOnline = ['Andres', 'Carlos', 'Javi']
+
+
+        //accedemos al valor de un array por posición, y también modificamos dicho valor por posición.
+
+        document.write(listaAlumnosOnline[2]); //Javi
+        listaAlumnosPresenciales[2] = 'Jelena'//Cambia Miguel por Jelena
+
+    //Trabajar con un array significa recorrerlo, para recorrerlo tengo que contar posiciones, asi que necesito bucles.
+
+    // 3 Bucles for i, while, do while, for of, for in, forEach.
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

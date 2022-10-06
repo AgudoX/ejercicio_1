@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 arrays</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Toda funcion igualada a una variable tiene que tener en su interior un return.
+
+        //Para saber el elemento más largo crear una variable para comparar.
+        const valores = new Array(true, 5, false, 'hola', 'adios', 2, 3);
+
+        //1. Determinar cual de los elementos de texto es mas largo
+        //2. Realizar la suma y multiplicacion de los elementos numericos.
+
+        function filtrarPorTipo(pArray, pTipo) {
+
+            const listaFiltrada = new Array();
+            let i = 0;
+            for (let valor of pArray) {
+                if (typeof valor === pTipo) {
+                    listaFiltrada[i] = valor;
+                    i++;
+                }
+            }
+            return listaFiltrada;
+        }
+
+        let arrayTextos = filtrarPorTipo(valores, 'string');
+        let arrayNumeros = filtrarPorTipo(valores, 'number');
+
+        function dameElMasLargo(pArrayStrings) {
+            let elementoMasLargo = "";
+            for (let string of pArrayStrings) {
+                if (string.length > elementoMasLargo.length) {
+                    elementoMasLargo = string;
+                }
+            }
+
+            return elementoMasLargo
+        }
+
+        let elemento = dameElMasLargo(arrayTextos)
+        console.log(elemento);
+
+
+        function calcular(pTipo, pArrayNumeros) {
+            let resultado = 0;
+            switch (pTipo) {
+                case 'sumar':
+                    resultado = sumar(pArrayNumeros)
+                    break;
+
+                case 'multiplicar':
+                    resultado = multiplicar(pArrayNumeros)
+                    break;
+            }
+            console.log(resultado);
+        }
+
+        function sumar(pListaNumeros) {
+            let resultado = 0;
+            for (let numero of pListaNumeros) {
+                resultado = resultado + numero;
+            }
+            return resultado;
+        }
+
+        function multiplicar(pListaNumeros) {
+            let resultado = 1;
+            for (let numero of pListaNumeros) {
+                resultado = resultado * numero;
+            }
+            return resultado;
+        }
+
+        calcular('sumar', arrayNumeros); //10
+        calcular('multiplicar', arrayNumeros); //30
+
+
+
+        /*         const valores = new Array(true, 5, false, 'hola', 'adios', 2, 3);
+                
+                        //1. Determinar cual de los elementos de texto es más largo. (typeof)
+                
+                        //2. Realizar la suma y multiplicación de los elementos numéricos.
+                
+                        for (let valu of valores) {
+                            if (typeof valu === "string") {
+                                console.log(valu.length, valu)
+                            }
+                
+                            if (typeof valu === "number") {
+                
+                                let suma = 0
+                                let multiplicacion = 1
+                                for (let i = 0; i < valu.length; i++) {
+                
+                                    suma += valu;
+                
+                                }
+                                console.log(suma)
+                
+                                for (let i = 0; i < valu.length; i++) {
+                
+                                    multiplicacion *= valu[i];
+                                }
+                                console.log(multiplicacion)
+                            }
+                
+                        } */
+
+
+
+    </script>
+</body>
+
+</html>

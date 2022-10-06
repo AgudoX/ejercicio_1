@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles for of</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //for of nos sirve para recorrer cualquier tipo de array.
+
+        const animales = new Array('Leon', 'Perro', 'Gato', 'Periquito', 'raton');
+
+        for (let i = 0; i < animales.length; i++) {
+            consol.log(animales[i]);
+        }
+
+        console.log('-------')
+
+        /* Hace lo mismo que el bucle anterior */
+        /* for pregunta ¿Hay animales? sí, animal = animales[0];
+        Vuelve a hacer la pregunta */
+        for (let animal of animales) {
+            console.log(animal);
+        }
+
+
+        /* Saca los que esten en posición impar */
+        let contador = 1;
+
+        for (let animal of animales) {
+            if (contador % 2 !== 0) {
+                console.log(animal);
+
+            }
+            contador++;
+        }
+    </script>
+
+</body>
+
+</html>

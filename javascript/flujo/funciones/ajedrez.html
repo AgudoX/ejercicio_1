@@ -42,6 +42,9 @@
 
 
 
+
+
+
         function changeBody(pAnchoCasillas, pNumeroCasillas) {
             document.getElementById("cuerpo").style.width = pAnchoCasillas * pNumeroCasillas + "px";
         }
@@ -50,7 +53,6 @@
 
             let casilla = `<div style="background-color: ${pColor} ; width: ${pAncho}px; height: ${pAncho}px;"></div>`
             document.write(`${casilla} `)
-
         }
 
 
@@ -64,10 +66,6 @@
 
         chess(numeroCasillas);
 
-
-        /*         if (numeroCasillas % 2 === 0) {
-                    color = (i % 2 === 0) ? "tomato" : "green";
-                } else { color = (i % 2 === 0) ? "green" : "tomato"; } */
 
     </script>
 </body>

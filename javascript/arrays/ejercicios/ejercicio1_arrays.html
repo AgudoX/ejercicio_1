@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //Crear un array de números vacios.
+
+        const miPrimerArray = new Array();
+
+        // como llenariamos este array con 10 números aleatorios entre 1 y 100. Los números tienen que ser enteros.
+
+        for (i = 0; i < 11; i++) {
+            miPrimerArray[i] = Math.floor(Math.random() * 101)
+
+        }
+
+        console.log(miPrimerArray)
+
+        // 
+
+
+        const miSegundaArray = new Array();
+
+        // como llenariamos este array con 10 números aleatorios entre 1 y 100. Los números tienen que ser enteros.
+        let listado = `<ul>`
+        for (i = 0; i < miPrimerArray.length; i++) {
+
+            if (miPrimerArray[i] % 3 === 0) {
+                listado += `<li>`
+                listado += `${miPrimerArray[i]}`;
+                listado += `</li>`
+            }
+        }
+
+        listado += `</ul>`
+        document.write(listado)
+
+        // 
+    </script>
+</body>
+
+</html>

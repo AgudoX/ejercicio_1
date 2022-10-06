@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 arrays</title>
+</head>
+
+<body>
+
+    <script>
+        const listaNombres = new Array('Ana', 'Natalia', 'Pepe', 'Juan', 'Antonio', 'alejandro', 'Almudena');
+
+        //quiero que pintes por pantalla aquellos nombres que comienzan por A. Pensad que tiene que valer para cualquier letra.
+
+        const texto = 'Solo se que no se nada';
+        console.log(texto[texto.length - 1])
+
+        function filtrarPorLetra(pLista, pLetra) {
+            for (let nombre of pLista) {
+                if (nombre[0].toLowerCase() === pLetra.toLowerCase()) {
+                    console.log(nombre)
+                }
+            }
+        }
+
+        filtrarPorLetra(listaNombres, 'A')
+    </script>
+</body>
+
+</html>
