@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex article {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid;
+}
+
+article.peligroso {
+    border-color: red;
+}
+
+article.cuidadin {
+    border-color: orange;
+}
+
+article.ojito {
+    border-color: gold;
+}
+
+article.suavecito {
+    border-color: green;
+}
+
+article.docil {
+    border-color: lightblue;
+}

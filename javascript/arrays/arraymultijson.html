@@ -39,12 +39,40 @@
             }
         )
 
-        console.log(listaAlumnos)
+        //console.log(listaAlumnos)
 
-        for (let alumno of listaAlumnos) {
-            document.write(alumno.nombre)
+        function pintarLista(pLista) {
+            let lista = '<ul>';
+            for (let alumno of pLista) {
+                lista += `<li>${alumno.nombre}: 
+                ${alumno.edad}
+            </li>`
+            }
+            lista += '</ul>';
+            document.write(lista)
         }
 
+        // pintarLista(listaAlumnos)
+
+        //quiero la lista de aprobados
+
+        function filtrarPorNota(pListaAlumnos, pNotaMin, pNotaMax) {
+            const listaFiltrada = new Array();
+            let i = 0;
+            for (let alumno of pListaAlumnos) {
+                if (alumno.notamedia >= pNotaMin && alumno.notamedia <= pNotaMax) {
+                    listaFiltrada[i] = alumno;
+                    i++;
+                }
+            }
+
+            return listaFiltrada
+        }
+
+        let aprobados = filtrarPorNota(listaAlumnos, 5, 10)
+        pintarLista(aprobados);
+        //callback
+        // pintarLista(filtrarPorNota(listaAlumnos, 5, 10));
     </script>
 
 </body>

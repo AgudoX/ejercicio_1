@@ -15,7 +15,10 @@ let tamaño = parseInt(prompt('Dime cuantas letras quieres que tengan los nombre
 
 /* function crearArray(pArray) {
     const pArray = new Array()
-} */
+    // No funciona pq si pArray es una constante o una variable no puede ser un parámetro puesto que lo estaría redeclarando.
+}*/
+
+
 
 const flow = new Array()
 

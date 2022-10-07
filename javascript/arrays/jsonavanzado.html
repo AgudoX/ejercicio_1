@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON avanzado</title>
+</head>
+
+<body>
+
+    <script>
+
+        const alumno = new Object({
+            nombre: 'Juan Antonio',
+            apellidos: 'Agudo',
+            edad: 40,
+            genero: 'masculino',
+            matricula: '8790JJJ',
+            estado: 'false',
+            asignatura: ['matematicas', 'fisica', 'quimica'], //Esto es un Array dentro de un JSON.
+            notas: [3, 7, 5],
+            direccion: {
+                calle: 'Gustavo',
+                cp: {
+                    codigo: '20287',
+                    ciudad: 'Madrid'
+                }
+            },
+            superpoder: 'volar',
+
+            notamedia: function () {
+                //this se usa para referirnos a los elementos del JSON pero desde dentro, se suele usar con cosas como funciones.
+                let suma = 0
+                for (let nota of this.nota) {
+                    suma += nota;
+                }
+                return suma / this.nota.lenght;
+            }
+
+        })
+
+        // alumno.nombre = 'Pepe'; //Cambiar valor de la propiedad nombre.
+        console.log(alumno);
+
+
+        console.log(alumno.nombre);
+        console.log(alumno['nombre']);
+        console.log(alumno.notas[1])//7 En este caso como es una array para acceder a sus valores internos usamos [1].
+
+        console.log(alumno.direccion.cp.ciudad) //madrid
+        console.log(alumno['direccion']['cp']['ciudad']) //madrid
+        console.log(alumno.notamedia())//Para acceder a la función primero hay que acceder el objeto.
+
+
+    </script>
+</body>
+
+</html>

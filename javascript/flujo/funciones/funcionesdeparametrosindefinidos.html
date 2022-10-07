@@ -32,15 +32,22 @@
             /* Esto mostraría el 5 elemento ya que empieza en 0. */
         }
 
-        function suma2() {
+        function sumar() {
             let resultado = 0;
 
             for (let i = 0; i < arguments.length; i++) {
-                console.log(arguments[i]);
+                resultado = resultado + arguments[i];
+                //resultado += arguments[i];
             }
+
+            console.log(resultado);
+
         }
 
-        suma2(12, 12, 14, 20)//58
+        sumar(12, 22, 32, 42) //108
+        sumar(10, 10, 10, 10, 10, 10, 10, 10, 10, 10) //100
+        sumar(1, 2, 3, 4, 5, 6, 7, 8, 9) //45
+
 
 
     </script>
