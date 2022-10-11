@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Includes</title>
+</head>
+
+<body>
+
+    <script>
+        //Include se aplica exclusivamente sobre arrays simples y por tanto sobre cadenas de caracteres.
+
+        //Basicamente me dice si un elemento esta incluido en la cadena o Array
+
+        //Includes devuelve solo true o false.
+
+
+        const texto = 'Esta lloviedo mazo';
+
+        let textoBusqueda = 'Mazo';
+
+        let resultado = texto.toLowerCase().includes(textoBusqueda.toLowerCase());
+
+        console.log(resultado)//True
+
+        //Array simple
+
+        const animales = new Array('periquito', 'loro', 'waifu', 'vegetta', 'goku')
+
+        let busqueda = 'Goku'
+
+        let resultado2 = animales.includes(busqueda.toLowerCase()); //A un array no le podemos meter el lowercase.
+
+        console.log(resultado2); //True
+
+
+        //Como aplicar includes a una array multidimensional y crear un buscador semántico.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'juan Perez',
+                edad: 40
+            },
+            {
+                nombre: 'Lucas Lopez',
+                edad: 46
+            },
+            {
+                nombre: 'Maria Aguado',
+                edad: 31
+            },
+            {
+                nombre: 'Pepe Lopez',
+                edad: 22
+            },
+        )
+
+
+        //Quiero encontrar alumnos que se apelliden lopez.
+
+        function filterBySurname(pLista, pSurname) {
+            return pLista.filter(pAlumno =>
+                pAlumno.nombre.toLowerCase().includes(pSurname.toLowerCase()))
+
+        }
+
+        filterBySurname(listaAlumnos, 'perez');
+        console.log(listaFiltrada);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice, </title>
+</head>
+
+<body>
+
+    <script>
+        //Splice modifica el array principal capturando y borrando los elementos seleccionados.
+        //Retorna el o los elementos eliminados en forma de array.
+
+        //Recibe dos parámetros el primero es la posición desde la que parto y el segundo el número de valores que borro.
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito', 'juan', 'Lucas')
+
+        let elementodEliminados = listaAnimales.splice(2/* posición */, 3/* Nº elementos que borro */)
+        console.log(listaAnimales);
+        console.log(elementodEliminados);
+
+    </script>
+</body>
+
+</html>

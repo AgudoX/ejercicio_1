@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo For each</title>
+</head>
+
+<body>
+
+    <script>
+        //For each me permite recorrer arrays, bien usada me permite tener menos ámbitos, menos bandera. Y por eso es un método que a nivel profesional se usa mucho.
+
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'juan',
+                edad: 40
+            },
+            {
+                nombre: 'Lucas',
+                edad: 46
+            },
+            {
+                nombre: 'Maria',
+                edad: 31
+            },
+            {
+                nombre: 'Pepe',
+                edad: 22
+            },
+        )
+
+        function pintarAlumnos(pLista) {
+            pLista.forEach((pAlumno, pIndex /* Este sería el contador, vale lo mismo que la posición que se encuentre recorriendo en la array. */) => pintarUnAlumno(pAlumno, pIndex))
+        }
+
+        function pintarUnAlumno(pAlumno, pIndex) {
+            document.write(`<div> 
+                    <h3>${pIndex}${pAlumno.nombre}</h3>
+                    <p>${pAlumno.edad}</p>
+                    </div>`)
+        }
+
+        pintarAlumnos(listaAlumnos)
+
+
+    </script>
+</body>
+
+</html>

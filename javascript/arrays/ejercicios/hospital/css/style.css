@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    background-color: aquamarine;
+    text-align: center;
+    width: 80%;
+    border-bottom: 2px solid blueviolet;
+    margin: 1em auto;
+}
+
+article :is(h2, h3) {
+    color: rgb(255, 0, 153);
+}

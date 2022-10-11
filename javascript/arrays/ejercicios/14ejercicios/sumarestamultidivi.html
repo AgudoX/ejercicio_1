@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Impares</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const dieznum = new Array()
+        for (i = 0; i < 10; i++) {
+            let numeros = parseInt(prompt('Dime un número'))
+            dieznum[i] = numeros;
+        }
+
+
+        function operaciones(pOperacion) {
+            let resultado = 0
+            let resultado1 = 0
+            switch (pOperacion) {
+                case 'suma':
+                    for (let numeritos of dieznum) {
+
+                        resultado += numeritos
+
+                    }
+                    break;
+                case 'resta':
+                    for (let i = 1; i < dieznum.length; i++) {
+                        resultado1 += dieznum[i]
+                    }
+                    resultado1 = dieznum[0] - resultado1;
+                    resultado = resultado1
+                    break;
+
+                case 'division':
+                    resultado1 = 1
+                    resultado = 1
+                    for (let i = 1; i < dieznum.length; i++) {
+                        resultado1 *= dieznum[i]
+                    }
+                    resultado1 = dieznum[0] / resultado1;
+                    resultado = resultado1
+                    break;
+                case 'multiplicacion':
+                    resultado = 1
+                    for (let numeritos of dieznum) {
+
+                        resultado *= numeritos
+
+                    }
+                    break;
+            }
+            alert(resultado)
+
+        }
+
+
+        operaciones('division');
+        operaciones('multiplicacion');
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carne o Pescado</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let carneopescado = prompt('¿Carne o Pescado caballero?')
+        let postre = prompt('¿Desea Postre?')
+
+
+
+        const comida = function (pCarneopescado, pPostre, pPropina) {
+            let cuenta = 0
+            switch (pCarneopescado.toLowerCase()) {
+                case 'carne':
+                    cuenta += 23
+                    break;
+
+                case 'pescado':
+                    cuenta += 15
+                    break;
+            }
+            console.log(cuenta)
+
+            switch (pPostre.toLowerCase()) {
+                case 'si':
+                    cuenta += 3
+                    break;
+
+                case 'no':
+                    break;
+            }
+
+            cuenta = cuenta + (cuenta * pPropina / 100);
+            alert(cuenta + '€');
+        }
+
+
+        comida(carneopescado, postre, 6)
+
+
+
+    </script>
+</body>
+
+</html>

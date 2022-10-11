@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Numeros</title>
+</head>
+
+<body>
+
+    <script>
+        // 1ª Opción
+        let numeros = new Array(4, 5, 1, 8, 12, 24, 40, 7);
+        let numerosordenados = new Array();
+
+        for (i = 0; i <= numeros.length; i++) {
+
+            for (j = 0; j <= (numeros.length - i); j++) {
+
+                if (numeros[i] <= numeros[i + j]) {
+                    let store = numeros[i]
+                    numeros[i] = numeros[i + j]
+                    numeros[i + j] = store;
+
+                }
+            }
+        }
+
+        console.log(numeros)
+
+        // 2ª Opción
+
+        var numbers = [12, 10, 15, 11, 14, 13, 16];
+        function ordenar(array) {
+
+            let done = false;//Esto y escribir true directamente en while es lo mismo.
+            /* la variable done se usa para inciciar y terminar el bucle, no confundir con while(done = true), en este caso no se inicializaría. */
+            while (!done) {
+                done = true;
+                for (let i = array.length; i >= 0; i--) {
+                    if (array[i] > array[i - 1]) {
+
+                        /* Lo que hago con tmp es almacenar el valor del último número de la array, sustituyo el valor del ultimo array por el penúltimo y viceversa gracias a que he almacenado el valor. */
+                        let tmp = array[i - 1];
+                        array[i - 1] = array[i];
+                        array[i] = tmp;
+                        done = false; //Al acabar el bucle done sería = false y al pasar por while se acabaría el bucle.
+                    }
+                }
+            }
+
+            return array;
+        }
+
+
+
+        ordenar(numbers);
+        console.log(numbers);
+
+
+
+    </script>
+</body>
+
+</html>

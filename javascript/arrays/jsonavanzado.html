@@ -33,10 +33,10 @@
             notamedia: function () {
                 //this se usa para referirnos a los elementos del JSON pero desde dentro, se suele usar con cosas como funciones.
                 let suma = 0
-                for (let nota of this.nota) {
+                for (let nota of this.notas) {
                     suma += nota;
                 }
-                return suma / this.nota.lenght;
+                return suma / this.notas.lenght;
             }
 
         })

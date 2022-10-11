@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Map</title>
+</head>
+
+<body>
+
+    <script>
+        //map crea otra array en base a la array original. El mapeo de cada elemento me permite aplicar a cada elemento de la array unas reglas que modifican su resultado.
+
+
+        const listaAlumnos = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+
+        //Sacar esa lista y una que fuera el doble de esa lista
+        /*
+        Opción sin map
+        
+            const dobles = new Array()
+            let contador = 0
+        
+                for( let numero of listaAlumnos) {
+                    dobles[contador] = numero * 2;
+                    contador++;
+                }
+        
+                console.log(dobles);
+         */
+
+        /* const dobles = listaAlumnos.map(function(pNumero) {
+            return pNumero * 2;
+        })
+        
+        console.log(dobles);
+        
+         */
+        const dobles = listaAlumnos.map(pNumero => pNumero * 2);
+
+        console.log(dobles);
+
+        const listaNombres = new Array('Juan', 'Luis', 'Marcos', 'Pepe')
+
+        const listaNombresMinuscula = listaNombres.map(pNombres => pNombres.toLowerCase())
+
+        console.log(listaNombresMinuscula)
+
+
+
+    </script>
+</body>
+
+</html>

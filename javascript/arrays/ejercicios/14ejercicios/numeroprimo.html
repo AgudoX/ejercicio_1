@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros Primos</title>
+</head>
+
+<body>
+
+    <script>
+
+        let numeroprimo = parseInt(prompt('Dime un número y veremos si es primo:'))
+
+        let j = 0
+        for (i = 2; i <= numeroprimo; i++) {
+
+            if (numeroprimo % i === 0) {
+                j++
+            }
+        }
+
+        if (j === 1) {
+
+            alert('Ese número es primo')
+        }
+        else {
+            alert('ese número no se corresponde con ningún familiar, especialmente primos')
+        }
+
+
+    </script>
+</body>
+
+</html>

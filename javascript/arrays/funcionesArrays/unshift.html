@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unshift - Introducir elementos por el principio</title>
+</head>
+
+<body>
+
+    <script>
+        //Introduce elementos dentro de un array por el principio, recalculando las posiciones de los elementos.
+        //Al igual que push me devuelve la longitud del array resultante.
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito')
+
+        let animal = 'Marsupilami'
+        let longitud = listaAnimales.unshift(animal, 'Hipopotamo')
+
+        console.log(longitud)
+        console.log(listaAnimales)
+
+    </script>
+</body>
+
+</html>

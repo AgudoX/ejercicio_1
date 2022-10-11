@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+
+<body>
+
+    <script>
+        //Reverse, Invierte el array MODIFICANDO EL ARRAY PRINCIPAL, por lo que tengo que tener cuidado pq es un método y eso hace que tenga que trabajar por referencia.
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito', 'Marsupilami', 'Goku', 'Vegetta')
+
+        /*   const listaAnimalesInvertida = listaAnimales.reverse();
+  
+  
+          console.log(listaAnimalesInvertida); */
+
+        //Para solventar el problema de la modificación de la Array inicial usamos esto:
+        //spread operator [...array] genera una copia virtual que no es el array original consiguiendo que no se modifique.
+
+        const listaAnimalesInvertida = [...listaAnimales].reverse()
+
+        //Si usamos el spread operator con splice consigues un fragmento de la array sin cargarte la inicial.
+
+        console.log(listaAnimalesInvertida)
+        console.log(listaAnimales)
+
+
+
+
+    </script>
+</body>
+
+</html>

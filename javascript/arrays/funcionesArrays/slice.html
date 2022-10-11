@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice - Copiar parte de un array en otro array</title>
+</head>
+
+<body>
+
+    <script>
+        //Slice captura y copia elementos consecutivos de mi array en la posición que yo quiera, sin modificar el array inicial.
+
+        //Recibe 2 parámetros, el primero es la posición desde la que parto. El segundo es la posición hasta la que copio SIN INCLUIRLA.    
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito', 'Marsupilami', 'Goku', 'Vegetta')
+
+        let animalDomestico = listaAnimales.slice(1, 3);
+
+        //Ultimo elemento, 1ª opción
+        let dragonBall = listaAnimales.slice(4, 6)
+
+
+        //Ultimo elemento, 2ª opción
+
+        let dragonBall2 = listaAnimales.slice(listaAnimales.length - 1, listaAnimales.length)
+
+
+        //Ultimo elemento, 3ª opción Empieza por el final
+
+        let dragonBall3 = listaAnimales.slice(-1)//Aguila
+
+        let dragonBall4 = listaAnimales.slice(-4)//los 4 empezando por la cola.
+
+
+        console.log(animalDomestico); //Gato y Periquito
+        console.log(dragonBall)
+        console.log(listaAnimales)
+
+    </script>
+</body>
+
+</html>

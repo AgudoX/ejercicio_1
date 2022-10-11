@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Impuesto</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let factorial = parseInt(prompt('Dime un precio y te digo su IVA'))
+        let resultado = 1
+
+        const IVA = function (pImpuesto) {
+            let impuestazo
+            impuestazo = factorial * pImpuesto / 100
+
+            resultado = (impuestazo + factorial)
+
+            return resultado
+        }
+
+
+
+        alert(IVA(21))
+
+
+    </script>
+</body>
+
+</html>

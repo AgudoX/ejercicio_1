@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Find</title>
+</head>
+
+<body>
+
+    <script>
+        //Find funciona para cualquier array. Hace una búsqueda en función de una condición descrita en la función de condición y me devuelve un objeto Json o un tipo primitivo. Me devuelve el primero que cumpla la condición y se para.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'juan',
+                edad: 40
+            },
+            {
+                nombre: 'Lucas',
+                edad: 46
+            },
+            {
+                nombre: 'Maria',
+                edad: 30
+            },
+            {
+                nombre: 'Pepe',
+                edad: 50
+            },
+
+
+        )
+
+
+        // Imaginemos que queremos buscar el estudiante que tenga más de 45 años, solo muestra el primero.
+
+        const condicion = pEstudiante =>
+            (pEstudiante.edad >= 45) ? true : false;
+
+
+        const estudiante = listaAlumnos.find(condicion/* Esto tiene que ser una función */)
+
+        console.log(estudiante)
+
+
+        const filterByAge = (pListaAlumnos, pAge) => pListaAlumnos.find(pEstudiante => pEstudiante.edad >= pAge);
+
+        console.log(filterByAge, 36) //Me coge el primer alumno con edad superior o igual a los 36. Es mejor hacerlas así para quitar ámbito, es más pro.
+
+    </script>
+</body>
+
+</html>

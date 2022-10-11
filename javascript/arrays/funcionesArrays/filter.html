@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Filter</title>
+</head>
+
+<body>
+
+    <script>
+        //Filter permite buscar más de un elemento dentro del array simepre que este cumpla la función de condición. El filter SIEMPRE devuleve un array, aun que sea vacio.
+
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'juan',
+                edad: 40
+            },
+            {
+                nombre: 'Lucas',
+                edad: 46
+            },
+            {
+                nombre: 'Maria',
+                edad: 31
+            },
+            {
+                nombre: 'Pepe',
+                edad: 22
+            },
+
+
+        )
+
+
+        // Imaginemos que queremos buscar los estudiante que tenga menos de 40 años y más de 20, 
+
+        filterByAge = (pLista, pMin, pMax) => pLista = listaAlumnos.filter(pAlumno => pAlumno.edad < pMax && pAlumno.edad > pMin);
+
+
+        let listaAlumnosMenores40 = filterByAge(listaAlumnos, 20, 40)
+
+
+        let listaAlumnosMenores3040 = filterByAge(listaAlumnos, 30, 40)
+
+        console.log(listaAlumnosMenores40)
+        console.log(listaAlumnosMenores3040)
+
+    </script>
+</body>
+
+</html>

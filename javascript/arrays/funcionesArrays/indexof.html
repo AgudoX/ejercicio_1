@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo IndexOf y findIndex</title>
+</head>
+
+<body>
+
+    <script>
+        //indexOf solo busca elementos dentro de arrays simples. Si lo encuentra me devuelve su posicion y si no encuentra me devuelve -1;
+
+        const listaAnimales = new Array('perro', 'gato', 'periquito', 'hipopotamo', 'leon', 'hampster');
+
+        let busqueda = 'PeriquitO'
+
+        let posicion = listaAnimales.indexOf(busqueda.toLowerCase());
+        console.log(posicion);
+        console.log(listaAnimales.at(posicion))
+
+        //este metodo no sirve para arrays multidimensionales.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 40
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+            {
+                nombre: 'Rocio',
+                edad: 23
+            }
+        );
+
+        let nombreBuscar = 'pepe';
+
+        //findIndex funciona exactamente igual que indexOf me devuelve la posicion del elemento y si no lo encuentra me devuelve -1.
+
+        //Tendremos que trabajar con el concepto de funcion de condición. Callback que interpone la condición que tengo que cumplir
+
+        /* 
+        let posicionBusqueda = listaAlumnos.findIndex( function(pAlumno) {
+            return pAlumno.nombre.toLowerCase() === nombreBuscar.toLowerCase()
+        } )
+        */
+
+
+        let posicionBusqueda = listaAlumnos.findIndex(pAlumno => (pAlumno.nombre.toLowerCase() === nombreBuscar) ? true : false);
+
+
+        console.log(posicionBusqueda)
+        console.log(listaAlumnos.at(posicionBusqueda))
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

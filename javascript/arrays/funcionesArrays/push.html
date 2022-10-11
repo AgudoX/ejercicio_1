@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Push</title>
+</head>
+
+<body>
+
+    <script>
+        //Sirve para cualquier tipo de Array, no para Json. Me permite introducir elementos dentro de una array en su última posición disponible. Por ejemplo, si el array tiene 3 elementos el nuevo elemento se introducirá en la posición [3]. Hace lo mismo que un contador pero de forma automática.
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito')
+
+        let animal = 'Unicornio'
+
+        listaAnimales.push(animal, 'Marsupilami');//Se pueden introducir los elementos que queramos.
+        //Push devuelve la longitud del Array una vez se ha insertado el elemento
+        console.log(listaAnimales)
+
+        let longitud = listaAnimales.push() //Te da la length
+        console.log(longitud)
+
+
+
+    </script>
+</body>
+
+</html>
