@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+
+<body>
+
+    <p>Juan</p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus id deleniti magnam illo repellendus
+            minus laboriosam obcaecati perspiciatis optio quae ducimus, ex ab! At quidem provident similique minima
+            delectus rem culpa vel vero, beatae consectetur molestias voluptatem harum dolorem obcaecati quam sunt?
+            Nulla corrupti eum, voluptatibus illum aspernatur nesciunt? Blanditiis.
+        </p>
+    </div>
+
+    <section>
+        <article>
+            <p>Hola</p>
+        </article>
+    </section>
+
+
+
+    <script>
+        //Recorrer todos los parrafos de mi html
+
+        const parrafos = document.getElementsByTagName('p');
+
+        console.log(parrafos);//devuelve un htmlCollection que no es más que una Array con objetos Json, es decir, un multijson, la diferencia es que no se pueden usar las funciones de arrays (.find, .push ....).
+
+        /* Aunque solo tenga un parrafo .getElementsByTagName te devuelve una array por lo que hay que referirse a el como tal: parrafo[0] */
+
+        console.log(parrafos[0]) //Accede al primer parrafo
+
+        //Cambiar texto 1º parrafo
+        // innerText es una propiedad de html que me permite cambiar el texto plano de una etiqueta.
+
+        parrafos[0].innerText = 'Superparrafo'
+
+        //ERROR
+        /* parrafos.innerText = 'Hola' */ //Hay que poner a que parrafo nos referimos.
+
+
+        //Si queremos meter html usamos innerHTML ya que innerText no interpreta html.
+        parrafos[1].innerHTML = `<strong> Cambiado </strong>`
+
+
+    </script>
+</body>
+
+</html>

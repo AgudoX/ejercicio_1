@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+
+<body>
+    <p class="impar">Item 1</p>
+    <p class="par">Item 2</p>
+    <p class="impar">Item 3</p>
+    <p class="par">Item 4</p>
+    <p class="impar">Item 5</p>
+    <p class="par">Item 6</p>
+    <p class="impar">Item 7</p>
+
+    <div>
+        <article class="impar">
+            Item
+        </article>
+    </div>
+
+
+    <script>
+
+
+
+        //Poner los impares en mayuscula
+
+        function cambiarTextos(pTipo) {
+
+            const itemImpares = document.getElementsByClassName(pTipo);
+
+            for (let item of itemImpares) {
+                /* item.innerText().toUpperCase()  Si solo hago esto no estoy capturando dentro de innerText por lo que no se muestra en el HTML.*/
+                let texto = item.innerText.toUpperCase()
+                item.innerText = texto;
+            }
+        }
+
+        cambiarTextos('impar');
+
+    </script>
+</body>
+
+</html>

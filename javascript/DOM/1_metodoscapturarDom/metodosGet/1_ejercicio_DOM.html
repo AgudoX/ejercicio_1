@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElements ejercicio</title>
+</head>
+
+<body>
+
+    <header>
+        <ul></ul>
+    </header>
+
+
+
+
+    <footer>
+        <ul></ul>
+    </footer>
+
+
+    <script>
+        const secciones = new Array('Home', 'Services', 'Contacto');
+
+        const legal = new Array('Cookies', 'Privacidad');
+
+
+        //pintar cada li de lista de secciones en su zona correspondiente.
+
+
+        //1º Capturar las zonas
+        // opcion 1 capturar todos los uls
+
+        const uls = document.getElementsByTagName('ul');
+
+        const menu = uls[0];
+
+        // opcion 2 capturar por etiqueta semántica
+
+        const header = document.getElementsByTagName('header')[0];
+
+        const ulsheader = header.getElementsByTagName('ul')[0]
+
+
+
+        function pintarMenu(pArray, pObjdom) {
+            for (let item of pArray) {
+                pObjdom.innerHTML += `<li> ${item}</li>`
+            }
+        }
+
+        pintarMenu(secciones, ulsheader)
+
+
+        const footer = document.getElementsByTagName('footer')[0];
+
+        const ulsfooter = footer.getElementsByTagName('ul')[0]
+
+
+
+        function pintarFooter(pArray, pObjdom) {
+            for (let item of pArray) {
+                pObjdom.innerHTML += `<li> ${item}</li>`
+            }
+        }
+
+        pintarFooter(legal, ulsfooter)
+
+    </script>
+</body>
+
+</html>
