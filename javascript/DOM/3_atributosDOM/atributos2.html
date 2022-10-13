@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos 2</title>
+    <style>
+        .cuadrado {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadrado"></div>
+
+    <script>
+
+        const cuadrado = document.querySelector('.cuadrado')
+
+        function cambiarEstado() {
+            //Podemos acceder a los diferentes atributos y propiedades del elemento con selector .cuadrado
+            cuadrado.style.margin = '100px';
+            cuadrado.style.borderRadius = '50%';
+            cuadrado.style.transition = '2s'
+            cuadrado.style.backgroundColor = 'lightcoral'
+        }
+
+        setTimeout(() => {
+            cambiarEstado()
+        }, 1000)
+
+
+    </script>
+
+</body>
+
+</html>

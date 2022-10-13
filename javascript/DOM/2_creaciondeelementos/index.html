@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/datos.js"></script>
+</head>
+
+<body>
+    <section class="productos">
+
+    </section>
+
+
+    <script>
+
+        const productosSection = document.querySelector('.productos');
+
+        for (let producto of arrayProductos) {
+            const article = document.createElement('article'); //createElement genera lo siguiente: <article></article>
+            const h2 = document.createElement('h2');
+            h2.innerText = producto.nombre;
+
+            const pPrecio = document.createElement('p');
+            pPrecio.innerText = `Precio: ${producto.precio}`;
+
+            const pDestacado = document.createElement('p')
+            //Si el producto es destaca ponemos DESTACADO, si no, texto normal.
+
+            pDestacado.innerText = (producto.destacado) ? 'DESTACADO' : 'NORMAL'
+
+            const pOferta = document.createElement('p')
+
+            pOferta.innerText = (producto.oferta) ? 'OFERTA' : 'NORMAL'
+
+            //Para unir los diferentes elementos creados previamente usamos appendChild.
+            /* 
+            Una opción
+                        article.appendChild(h2)
+                        article.appendChild(pPrecio)
+                        article.appendChild(pDestacado)
+                        article.appendChild(pOferta)
+             */
+
+            article.append(h2, pPrecio, pDestacado, pOferta)
+
+            productosSection.appendChild(article);
+
+        }
+    </script>
+</body>
+
+</html>

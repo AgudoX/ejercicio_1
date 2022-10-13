@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Query</title>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+            <a href="">Info</a>
+        </li>
+        <li>
+            <a href="">about</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li>
+    </ul>
+
+
+    <script>
+        //Dos métodos, querySelector y querySelectorAll
+        // Recuperan elementos del DOM a partir de su selector CSS.
+
+        //Modificar el texto de todos los elementos del tipo a.
+
+        const enlaces = document.querySelectorAll('.menu li a');
+
+        //Todos los elementos que coincidan con ese selector son devueltos en forma de Array.
+
+        for (let enlace of enlaces) {
+            enlace.innerText = 'Cambiando los textos de enlaces'
+        }
+
+
+        // Recuperamos y modificamos la a dentro del tercer li del menu.
+
+        const tercerEnlace = document.querySelector('.menu li:nth-child(3) a');
+
+        tercerEnlace.innerText = 'Cuidadorrr'
+
+        //Modifico el href del tercer enlace, cada atributo es como cada clave - valor en un objeto Json.
+
+        tercerEnlace.href = 'http://google.com'
+
+
+    </script>
+</body>
+
+</html>

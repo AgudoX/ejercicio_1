@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Tiempo</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //setTimeout: Ejecuta una funcion cuando pase un tiempo concreto.
+        //Recibe como parametros (Una función anónima, Tiempo tras el cual se ejecuta la función en milisegundos.).
+
+        setTimeout(() => {
+            console.log('Se ejecuta despues de 3 segundos.')
+        }, 3000)
+
+
+
+        //setInterval: Ejecuta una funcion CADA X segundos.
+        //En este caso esperaría 2 segundos y ejecutaría, volvería a esperar y volvería a ejecutar....
+
+        setInterval(() => {
+            console.log('Se ejecuta cada 2 segundos.')
+        }, 2000)
+
+    </script>
+</body>
+
+</html>

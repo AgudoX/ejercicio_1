@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .cuadrado {
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            transition: 2s;
+        }
+
+        .rojo {
+            background-color: darkred;
+        }
+
+        .verde {
+            background-color: lightgreen;
+        }
+
+        .azul {
+            background-color: aquamarine;
+        }
+
+        .size {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado"></div>
+
+
+
+    <script>
+
+        const cuadrado = document.querySelector('.cuadrado');
+
+        // Disponemos de la propiedad classList
+        //Ofrece una serie de métodos que nos facilitan el trabajo con la asignación o el borrado de clases.
+
+        //Agregar una clase
+        /* cuadrado.classList.add('rojo', 'azul');
+        Se aplicaría la azul que es la última añadida */
+
+        cuadrado.classList.add('rojo', 'verde');
+
+        //Eliminar clase a los 3 segundos.
+
+        setTimeout(() => {
+            cuadrado.classList.remove('verde')
+        }, 2000)
+
+
+        setTimeout(() => {
+            cuadrado.classList.replace('rojo', 'azul')
+        }, 4000)
+
+        setInterval(() => {
+
+            cuadrado.classList.toggle('size')
+            /* Toggle: Si esta la clse size en cuadrado lo quita, si no está lo pone. */
+            cuadrado.classList.remove('azul')
+            cuadrado.classList.toggle('verde');
+        }, 1500)
+
+
+    </script>
+
+</body>
+
+</html>

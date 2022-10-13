@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos 2</title>
+    <style>
+        .cuadrado {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadrado" id="cuadrado1"></div>
+
+    <script>
+
+        const cuadrado = document.querySelector('.cuadrado');
+
+        console.log(cuadrado.id) //cuadrado1
+
+
+        // Funciones: getAttribute, setAttribute.
+        // Se utiliza para acceder a un atributo cuando este lo tenemos almacenado en una variable. No se utiliza mucho
+        const atributo = 'id'
+        console.log(cuadrado.getAttribute(atributo)); //cuadrado1
+        //Hace lo mismo que el de arriba.
+
+
+        cuadrado.setAttribute('id', 'cuadradito');
+        //El valor del id de cuadrado sería cuadradito.
+        cuadrado.setAttribute('style', 'background-color: red; margin: 200px;')
+        // El style de la constante cuadrado sería el escrito después de la coma, setAttribute le da valores a los atributos.
+    </script>
+
+</body>
+
+</html>

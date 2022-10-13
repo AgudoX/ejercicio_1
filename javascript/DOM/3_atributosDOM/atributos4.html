@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Quasi deleniti perferendis adipisci rerum!</p>
+    <p>Sed fugiat quae maiores repellat!</p>
+    <p>Reiciendis ipsum quo itaque laborum!</p>
+    <p>Quos consequuntur est mollitia enim?</p>
+    <p>Animi molestias velit quam perspiciatis?</p>
+    <p>Alias recusandae sequi in perspiciatis.</p>
+    <p>Sunt, dolor rerum. Culpa, earum.</p>
+    <p>Totam ipsam dolores dolorem obcaecati?</p>
+    <p>Cumque magni praesentium molestias. Commodi.</p>
+
+    <script>
+
+        const parrafos = document.querySelectorAll('p')
+
+        let contador = 0
+        /*         for (let parrafito of parrafos) {
+                    if (contador % 2 === 0) {
+                        parrafos[contador].style.border = '2px solid red'
+                        parrafos[contador].style.padding = '50px'
+                    } else {
+                        parrafos[contador].style.backgroundColor = 'black'
+                        parrafos[contador].style.color = 'white';
+                    }
+                    contador++
+                }
+         */
+
+        parrafos.forEach(() => {
+            if (contador % 2 === 0) {
+                parrafos[contador].style.border = '2px solid red'
+                parrafos[contador].style.padding = '50px'
+            } else {
+                parrafos[contador].style.backgroundColor = 'black'
+                parrafos[contador].style.color = 'white';
+            }
+            contador++
+        })
+
+    </script>
+</body>
+
+</html>

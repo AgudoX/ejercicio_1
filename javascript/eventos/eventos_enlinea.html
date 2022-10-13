@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en linea</title>
+</head>
+
+<body>
+    <ul class="menu">
+        <li onclick="cambiaColor('red')" onmouseenter="cambiaSize(this)">Rojo</li>
+        <!-- onclick ejecuta una acción al hacer click en el evento -->
+        <!-- onmouseenter ejecuta una acción al hacer hover en el li. Esa acción se mantiene en funcionamiento. -->
+        <!-- El this como parámetro se usa para referirnos al propio elemento que recibe la función. En este caso al li rojo.  -->
+        <li onclick="cambiaColor('blue')">Azul</li>
+        <li onclick="cambiaColor('yellow')">Amarillo</li>
+        <li onclick="cambiaColor('green')">Verde</li>
+    </ul>
+
+
+    <script>
+        //Conectamos una función con el html
+        /*        function cambiaColor(pColor) {
+       
+                   console.log('Se ha pulsado' + pColor)
+               }
+        */
+
+        /* Cambia el fondo de la web según el li al que se le haga click */
+        function cambiaColor(pColor) {
+
+            document.body.style.backgroundColor = pColor;
+
+        }
+
+        function cambiaSize(pElement) {
+            pElement.style.fontSize = '25px';
+        }
+    </script>
+</body>
+
+</html>

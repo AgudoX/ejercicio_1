@@ -89,7 +89,7 @@ const sueldoMax = function (pList) {
 
 console.log(sueldoMax(paycheck));
 
-let sueldoRef = 999999
+/* let sueldoRef = 999999
 const sueldoMin = function (pList) {
 
 
@@ -100,4 +100,4 @@ const sueldoMin = function (pList) {
 }
 
 
-console.log(sueldoMin(paycheck));
+console.log(sueldoMin(paycheck)); */

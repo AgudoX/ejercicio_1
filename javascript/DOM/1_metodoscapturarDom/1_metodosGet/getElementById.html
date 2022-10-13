@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementById</title>
+</head>
+
+<body>
+
+    <section>
+        <h2>Servicios</h2>
+        <p id="servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio dolorem
+            perferendis. Nisi,
+            tenetur est! Quisquam, iste maiores totam ratione similique necessitatibus maxime, soluta nostrum natus quae
+            omnis, qui alias.</p>
+    </section>
+
+    <section>
+        <h2>Servicios</h2>
+        <p id="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio dolorem perferendis.
+            Nisi,
+            tenetur est! Quisquam, iste maiores totam ratione similique necessitatibus maxime, soluta nostrum natus quae
+            omnis, qui alias.</p>
+    </section>
+
+    <script>
+        const servicios = document.getElementById('servicios');
+        /* En caso de que le dieramos el mismo id a varios elementos solo te coje el primero */
+        /* getElementById no te devuelve una array, solo te devuelve el elemento. */
+
+        servicios.innerText = 'Super texto';
+
+        const pAbout = document.getElementById('about');
+
+        pAbout.innerText = '¿Sabe una cosa?'
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="./images/Arcane wall.jpg" alt="Get jinxed">
+
+
+    <script>
+        const imgSrc = document.querySelector('img')
+
+        /*   
+              setTimeout(() => {
+        
+                    imgSrc.src = './images/chica.jpg'
+        
+                }, 3000)
+        
+         */
+
+        let numImagen = 1;
+
+        const interval = setInterval(() => {
+            if (numImagen === 4) {
+                numImagen = 1
+            }
+            imgSrc.src = `./images/imagen${numImagen}.jpg`;
+            numImagen++;
+        }, 20);
+
+
+        //clearInterva() Cancela una acción reiterativa que se inició mediante una llamada a setInterval.
+
+        function pararIntervalo() {
+            clearInterval(interval);
+        }
+
+    </script>
+</body>
+
+</html>
