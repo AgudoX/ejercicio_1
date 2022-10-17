@@ -72,6 +72,21 @@ class Universidad {
         }
         return result;
     }
+
+    obtenerAlumnos(subject) {
+        let contador = 0
+        for (let alumn of this.alumnos) {
+
+            for (let asignaturita of alumn.asignatura) {
+
+                if (asignaturita.asignatura === subject) {
+
+                    contador++
+                }
+            }
+        }
+        return contador;
+    }
 }
 
 
@@ -101,3 +116,5 @@ uni1.agregarAlumno(estudiante2)
 uni1.agregarAlumno(estudiante3)
 uni1.mostrarUniversidad()
 console.log(uni1.mostrarUniversidad())
+
+console.log(uni1.obtenerAlumnos('Electrónica'))
