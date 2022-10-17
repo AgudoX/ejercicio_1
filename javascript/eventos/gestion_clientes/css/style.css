@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex form {
+    width: 40%;
+    height: 60vh;
+    margin: 0 auto;
+    border: 3px solid #96C9DC;
+    background-color: #F9B9B7;
+}
+
+.flex form div {
+    margin: 20px 10px;
+    color: #F06C9B;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.flex form input {
+    background-color: #F06C9B;
+    border: 2px solid #F5D491;
+    color: #F5D491;
+    font-size: 0.9em;
+    transition: 1s;
+}
+
+.flex form input:hover {
+    background-color: #96C9DC;
+    border: 2px solid #F06C9B;
+
+}
+
+.flex form input[type='submit'] {
+
+    width: 50%;
+    height: 40px;
+    margin: 30px 25%;
+    transition: 2s;
+
+}
+
+.flex form input[type='submit']:hover {
+
+    background-color: #F5D491;
+    color: #F06C9B;
+}
+
+.flex form select {
+    width: 50%;
+    background-color: #F06C9B;
+    color: #F5D491;
+}
+
+.flex form select option {
+    width: 50%;
+    background-color: #F5D491;
+    color: #F06C9B;
+}
+
+.flex section {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    border: 3px solid #7FDEFF;
+    background-color: #2C2A4A;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex section :is(h2, h3, p, h4) {
+    margin: 10px;
+    color: #907AD6;
+    border: 1px solid #4F518C;
+    padding: 3px;
+}
+
+.flex section article {
+    width: 50%;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+
+    <form action="" method="" id="formulario">
+        <div>
+            <label>Nombre</label>
+            <input type="text" id="inputNombre">
+        </div>
+        <div>
+            <select name="" id="selectPais">
+                <label for="">Pais</label>
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="ge">Alemania</option>
+                <option value="po">Portugal</option>
+            </select>
+        </div>
+        <div>
+            <label for="">EDAD
+            </label>
+            <input type="range" id="selectEdad" min="0" max="99" step="1">
+        </div>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <div>
+        <p>Nombre: VALOR DEL CAMPO NOMBRE</p>
+        <p id="pPais"></p>
+        <p id="pEdad"></p>
+    </div>
+
+    <script src="js/formulario.js"></script>
+</body>
+
+</html>

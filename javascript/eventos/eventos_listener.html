@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>Amarillo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+        <li>rojo</li>
+    </ul>
+
+    <script>
+        // Asignar un evento click a cada uno de los li.
+
+        const lis = document.querySelectorAll('li');
+        /* 
+                for (let li of lis) {
+                    li.addEventListener('click', () => {
+                        console.log('Hacemos click');
+                        //Al hacer click en los li se ejecuta la función
+                    })
+                } */
+
+
+        for (let li of lis) {
+            li.addEventListener('click', clickLi  /* IMPORTANTE: No se ponen los paréntesis en la función pq solo la estamos definiendo, no ejecutando, si ponemos la ejecución se ejecuta sin hacer click automáticamente. */)
+
+            li.addEventListener('mouseenter', mouseo);
+            li.addEventListener('mouseleave', mouseLeaveLi);
+        }
+
+        function clickLi(event) {
+            //event contiene información del evento que estamos capturando.
+            console.log(event.target /* hace referencia al li pues es el target del event. */, event /* Hace referencia al 'click de arriba' */)
+            //console.log(li)
+
+            /* event.target se utiliza para decir: Cuando hagas click aplicale x al elemento al que se le está haciendo target, es decir, event.target es cualquier evento al que se le está haciendo click. */
+            event.target.style.color = 'lightcoral'
+        }
+
+        function mouseo(event) {
+            event.target.style.backgroundColor = 'pink'
+        }
+
+
+        function mouseLeaveLi(event) {
+            event.target.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+
+</html>
