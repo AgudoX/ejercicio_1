@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <input type="text" name="" id="campoTexto">
+    <button id="btn">Pulsar</button>
+
+    <button id="recuperarValor">Recuperar Valor</button>
+    <script>
+        const campoTexto = document.getElementById('campoTexto');
+        const btnPulsar = document.getElementById('btn');
+        const recuperarValor = document.getElementById('recuperarValor')
+        /* El local storage lo puede ver TODO EL MUNDO*/
+
+        btnPulsar.addEventListener('click', () => {
+            const texto = campoTexto.value;
+            //localStorage almacena información dentro del navegador del cliente.
+            // Dos métodos principales: setItem y getItem.
+            //Para guardar utilizamos setItem pasando la clave y el valor.
+            // Dentro de localStorage SOLO se pueden guardar STRINGS
+            localStorage.setItem('textoInput', texto);
+        })
+
+        btnPulsar.addEventListener('click', () => {
+            recuperarValor.addEventListener('click', () => {
+                // Para recuperar un valor de localStorage usamos el método getItem
+                const texto = localStorage.getItem('textoInput' /* getItem nos permite recuperar el valor que tenemos guardado en localStorage, el texto interno de getItem tiene que ser el mismo que la clave de setItem. */)
+
+                alert(texto);
+            })
+        })
+    </script>
+</body>
+
+</html>

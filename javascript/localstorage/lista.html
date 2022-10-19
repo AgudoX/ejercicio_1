@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Lista local Storage</title>
+</head>
+
+<body>
+
+    <input type="text" id="inputProducto">
+    <button id="btnGuardar">Guardar Producto</button>
+
+    <ul id="listaProductos"></ul>
+    <script>
+        const inputProducto = document.getElementById('inputProducto');
+        const btnGuardar = document.getElementById('btnGuardar');
+        const listaProductos = document.getElementById('listaProductos')
+        const productos = new Array()
+
+        btnGuardar.addEventListener('click', () => {
+            productos.push(inputProducto.value)
+            /* En localStorage solo podemos guardar STRINGS, no Arrays */
+            const strProductos = JSON.stringify(productos)
+            /* JSON.stringify convierte un array en una string, JSON.parse hace lo contrario, lo convierte en Array, osea que se suele convertir en string para almacenarlo, y se parsea al recuperarlo */
+
+            localStorage.setItem('arrProductos', strProductos);
+
+
+            const prsProductos = JSON.parse(strProductos)
+            listaProductos.innerHTML = ' '
+            pintarProductos(prsProductos)
+        })
+
+        /* Keydown detecta que una tecla se ha pulsado, lo usamos para agregar elementoa a una lista con el intro, que es la tecl 13, por eso el if está igualado al 13 */
+        inputProducto.addEventListener('keydown', (event) => {
+            if (event.keyCode === 13) {
+                productos.push(inputProducto.value);
+                const strProductos = JSON.stringify(productos)
+                localStorage.setItem('arrProductos', strProductos);
+                const prsProductos = JSON.parse(strProductos)
+                listaProductos.innerHTML = ' '
+                pintarProductos(prsProductos)
+
+            }
+        })
+
+        /* Función pintarProducto() que recorre el array de productos y para cada producto me lo pinte en el ul. */
+
+        const pintarProductos = (pArray) => {
+            pArray.forEach(product => {
+
+                const li = document.createElement('li')
+                li.innerText = product
+                listaProductos.append(li);
+            })
+        }
+
+        /* IMPORTANTE: Si metemos una array o una string en una comprobación de condicional si está vacio da false, si tiene contenido no da true, daría la cadena, pero se entiende como un true. 
+        null y undefined tmb se entienden como undefined */
+
+        // Si tengo datos en localStorage, recupero dichos datos. Si no, creo un array vacío
+        /* let goods = []; */
+        if (localStorage.getItem('arrProductos')) {
+            //Devuelve el valor almacenado o undefined.
+            productos = JSON.parse(localStorage.getItem('arrProductos'));
+
+        } 
+    </script>
+</body>
+
+</html>

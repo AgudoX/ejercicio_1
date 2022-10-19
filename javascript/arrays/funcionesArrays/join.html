@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join y split</title>
+</head>
+
+<body>
+
+    <script>
+        const letras = new Array('a', 'b', 'c')
+
+        letras.join(',')//Te junta la array en una única string
+        console.log(letras.join(' '))
+
+        const frases = 'Buenos dias suscriptores'
+
+        /* The split() method splits a string into an array of substrings.
+        
+        The split() method returns the new array.
+        
+        The split() method does not change the original string. */
+
+        /* No funciona en arrays, es para strings, y convertir estas en arrays. */
+
+        frases.split(' '/* El punto en el que hace el split */)//[Buenos, dias, suscriptores]; array 3 elementos.
+
+        console.log(frases.split(' '))
+    </script>
+</body>
+
+</html>
