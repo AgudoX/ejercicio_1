@@ -1,12 +1,12 @@
-const tareas = new Array(
+let tareas = new Array(
     {
         idTarea: 0,
-        titulo: 'Estudiar Javascript',
+        titulo: 'Comenzar con la dieta a base de manzanas.',
         prioridad: 'intermedio'
     },
     {
         idTarea: 1,
-        titulo: 'Estudiar Python',
+        titulo: 'Hacer función suma con colorinchis chachis pistachis.',
         prioridad: 'secundario'
     },
     {
