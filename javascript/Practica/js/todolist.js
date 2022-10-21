@@ -50,6 +50,23 @@ const pintarTareas = (array) => {
             const prsTask = JSON.parse(localStorage.getItem('arrayTasks'))
             pintarTareas(prsTask)
             /* Guarda y pinta las tareas almacenadas en el local storage*/
+            /* Po-up de la librería sweetalert */
+            let gifNumber
+            gifNumber = parseInt(Math.random() * 10)
+            Swal.fire({
+                title: 'Eliminado exitosamente<br> Tanta paz lleves como descanso dejas👼',
+                width: 600,
+                padding: '3em',
+                color: '#716add',
+                background: '#fff',
+                backdrop: `
+              rgba(0,0,123,0.4)
+              url("${gifs[gifNumber]}")
+              left center
+              
+              no-repeat
+            `
+            })
         })
     }
 
@@ -60,7 +77,7 @@ let i = 1
 buttonGuardar.addEventListener('click', () => {
 
     if (selectTarea.value === 'Selecciona una prioridad' || inputTarea.value === ' ') {
-        alert('🛑 UNDEFINED, NULL Y FALSE. Ponle una prioridad anda🤡')
+        alert('🛑 UNDEFINED, NULL Y NaN. Ponle una prioridad anda🤡')
     } else {
         tareas.push({
             idTarea: 2 + i,
@@ -74,9 +91,32 @@ buttonGuardar.addEventListener('click', () => {
         i++
         inputTarea.value = ' ' //Borra el texto del input cada vez que se guarda
         pintarTareas(prsTask) // Pinta la array guardado en localStorage
-    }
-})
 
+        /* Po-up de la librería sweetalert */
+        let gifNumber
+        gifNumber = parseInt(Math.random() * 10)
+        Swal.fire({
+            title: 'Guardado Exitosamente ✔<br>💭' + frasecitas[gifNumber],
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("${gifs[gifNumber]}")
+              left center
+              
+              no-repeat
+            `
+        })
+    }
+
+
+})
+const gifs = new Array('https://media.tenor.com/rEULxlxz7IkAAAAS/office-the.gif', 'https://media.tenor.com/kWejy2kDcTwAAAAC/office.gif', 'https://media.tenor.com/X15e67QrANUAAAAC/the-office.gif', 'https://media.tenor.com/YKGLsFmkkhgAAAAM/flash-michael-scott.gif', 'https://media.tenor.com/ibZ2opcYTyAAAAAM/entrepreneur-funny.gif', 'https://media.tenor.com/af42ogePyg0AAAAS/dwight-k-shrute-the-office.gif', 'https://tenor.com/view/dwight-schrute-the-office-rainn-wilson-stare-look-gif-17796255', 'https://media.tenor.com/LVi9BUZ1yrwAAAAM/the-office-brian-baumgartner.gif', 'https://media.tenor.com/6GIi9tonjeEAAAAM/parkour-the-office.gif', 'https://media.tenor.com/A-usPJNu8_AAAAAS/yes-right.gif', 'https://media.tenor.com/wkNqDtLXxKUAAAAS/michael-scott-michael.gif')
+
+
+const frasecitas = new Array('Si tienes novia debes serle fiel, y en tu caso, dar las gracias.', 'No eres un completo inútil, al menos sirves de mal ejemplo', 'Sabias que el matrimonio es la principal causa del divorcio', 'Hay muchas cosas en la vida más importantes que el dinero. ¡Pero cuestan tanto!', ' El verdadero amor sólo se presenta una vez en la vida… y luego ya no hay quien se lo quite de encima', 'Fuera del perro, un libro es probablemente el mejor amigo del hombre, y dentro del perro probablemente está demasiado oscuro para leer', '¿Usted piensa antes de hablar o habla tras pensar?', 'Siempre recuerda que tú eres absolutamente único, igual que todos los demás', 'Hay que fabricar máquinas que nos permitan seguir fabricando máquinas, porque lo que no va a hacer nunca la máquina es fabricar máquinas', 'Cúando en la consola te aparece "undefined", no es que te hayas equivocado, es una oportunidad de irte a tomar cafe y que lo arregle otro')
 
 
 

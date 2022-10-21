@@ -11,7 +11,7 @@ let tareas = new Array(
     },
     {
         idTarea: 2,
-        titulo: 'Subir a diamante',
+        titulo: 'Alcanzar el éxtasis en cuerpo y alma bendecido por el Espíritu Santo',
         prioridad: 'importante'
     },
 )
